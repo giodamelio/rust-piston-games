@@ -2,3 +2,13 @@
 name = "rust-piston-games"
 version = "0.1.0"
 authors = ["Gio d'Amelio <giodamelio@gmail.com>"]
+
+[[bin]]
+name = "snake"
+
+[dependencies]
+piston = "0.2.0"
+piston2d-graphics = "0.1.4"
+pistoncore-glutin_window = "0.2.0"
+piston2d-opengl_graphics = "0.1.0"
+
