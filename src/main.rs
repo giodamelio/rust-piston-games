@@ -39,7 +39,7 @@ impl App {
 
     fn update(&mut self, args: &UpdateArgs) {
         // Rotate 2 radians per second.
-        self.rotation += 2.0 * args.dt;
+        self.rotation += 10.0 * args.dt;
     }
 }
 
