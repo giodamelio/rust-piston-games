@@ -3,6 +3,14 @@ name = "rust-piston-games"
 version = "0.1.0"
 authors = ["Gio d'Amelio <giodamelio@gmail.com>"]
 
+[[bin]]
+name = "snake"
+path = "src/snake/snake.rs"
+
+[[bin]]
+name = "pong"
+path = "src/pong/pong.rs"
+
 [dependencies]
 piston = "0.2.0"
 piston2d-graphics = "0.1.4"
