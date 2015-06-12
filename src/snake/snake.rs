@@ -66,7 +66,7 @@ impl Snake {
             Keyboard(Key::L) => self.direction = Direction::Right,
             Keyboard(Key::H) => self.direction = Direction::Left,
 
-            _ => println!("Unhandled key: {:?}", button),
+            _ => {},
         };
     }
 }
