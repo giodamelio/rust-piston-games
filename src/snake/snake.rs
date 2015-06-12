@@ -48,10 +48,24 @@ impl Snake {
         use piston::input::keyboard::Key;
 
         match button {
+            // Arrow keys
             Keyboard(Key::Up) => self.direction = Direction::Up,
             Keyboard(Key::Down) => self.direction = Direction::Down,
             Keyboard(Key::Right) => self.direction = Direction::Right,
             Keyboard(Key::Left) => self.direction = Direction::Left,
+
+            // WASD
+            Keyboard(Key::W) => self.direction = Direction::Up,
+            Keyboard(Key::S) => self.direction = Direction::Down,
+            Keyboard(Key::D) => self.direction = Direction::Right,
+            Keyboard(Key::A) => self.direction = Direction::Left,
+
+            // HJKL
+            Keyboard(Key::K) => self.direction = Direction::Up,
+            Keyboard(Key::J) => self.direction = Direction::Down,
+            Keyboard(Key::L) => self.direction = Direction::Right,
+            Keyboard(Key::H) => self.direction = Direction::Left,
+
             _ => println!("Unhandled key: {:?}", button),
         };
     }
