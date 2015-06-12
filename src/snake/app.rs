@@ -3,7 +3,6 @@ use piston::input::Button;
 use opengl_graphics::GlGraphics;
 
 use grid::Grid;
-use direction::Direction;
 use snake::Snake;
 use constants::*;
 

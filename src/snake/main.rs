@@ -3,12 +3,8 @@ extern crate graphics;
 extern crate glutin_window;
 extern crate opengl_graphics;
 
-use std::fmt;
-
 use piston::window::WindowSettings;
 use piston::event::{
-    RenderArgs,
-    UpdateArgs,
     Events,
     UpdateEvent,
     RenderEvent,

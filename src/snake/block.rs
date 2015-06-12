@@ -3,7 +3,7 @@ use location::Location;
 #[derive(Debug)]
 pub struct Block {
     pub location: Location,
-    pub blockType: BlockType
+    pub block_type: BlockType
 }
 
 #[derive(Debug)]

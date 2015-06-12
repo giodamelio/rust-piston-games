@@ -17,16 +17,16 @@ impl Grid {
         for rownum in 0..HEIGHT_IN_BLOCKS {
             let mut row: Vec<Block> = vec!();
             for colnum in 0..WIDTH_IN_BLOCKS {
-                let wallType = match (colnum, rownum) {
-                    (x, y) if x == 0 => BlockType::Wall,
-                    (x, y) if x == WIDTH_IN_BLOCKS - 1 => BlockType::Wall,
-                    (x, y) if y == 0 => BlockType::Wall,
-                    (x, y) if y == HEIGHT_IN_BLOCKS - 1 => BlockType::Wall,
+                let wall_type = match (colnum, rownum) {
+                    (x, _) if x == 0 => BlockType::Wall,
+                    (x, _) if x == WIDTH_IN_BLOCKS - 1 => BlockType::Wall,
+                    (_, y) if y == 0 => BlockType::Wall,
+                    (_, y) if y == HEIGHT_IN_BLOCKS - 1 => BlockType::Wall,
                     _ => BlockType::Empty
                 };
 
                 row.push(Block {
-                    blockType: wallType,
+                    block_type: wall_type,
                     location: Location {
                         x: colnum * BLOCK_SIZE,
                         y: rownum * BLOCK_SIZE
@@ -36,7 +36,7 @@ impl Grid {
             rows.push(row);
         }
 
-        let mut grid = Grid {
+        let grid = Grid {
             grid: rows
         };
         grid
@@ -53,7 +53,7 @@ impl Grid {
                     BLOCK_SIZE as f64
                 );
 
-                match block.blockType {
+                match block.block_type {
                     BlockType::Wall =>
                         rectangle(WHITE, square, c.transform, gl),
                     BlockType::Empty =>
