@@ -5,7 +5,7 @@ authors = ["Gio d'Amelio <giodamelio@gmail.com>"]
 
 [[bin]]
 name = "snake"
-path = "src/snake/snake.rs"
+path = "src/snake/main.rs"
 
 [[bin]]
 name = "pong"
